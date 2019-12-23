@@ -1,29 +1,37 @@
 describe("Main", function() {
+    var arr = []
     //Hooks
     before(function() {
         //run once time
-        console.log("BEGINNNNNNN BEFORE")
+        // start connection in database
+        // create data set 
     })
     after(function() {
         //run once time
-        console.log("ENDDDDDDDDDD AFTER")
+        // end connection in database
+        // clear data set
     })
 
     beforeEach(function() {
         // run all time before each block
-        console.log("********** BEACH")
+        arr = [1, 2, 3]
     })
 
     afterEach(function() {
         // run all time after each block
-        console.log("@@@@@@@@@ AFEACH")
     })
 
-    it("CASE 1", function() {
-        console.log("ONEEEE CASE BRO")
+    it("should have a size of 4 when push another value to the array", function() {
+        arr.push(4)
+        console.log('size array: ', arr.length)
     })
     
-    it("CASE 2", function() {
-        console.log("TWO CASE BRAAAA")
+    it("should have a size of 2 when pop a value from the array", function() {
+        arr.pop()
+        console.log('size array: ', arr.length)
+    })
+
+    it("should remove the value 3 when use pop the array", function() {
+        console.log(arr.pop() === 3)
     })
 })
