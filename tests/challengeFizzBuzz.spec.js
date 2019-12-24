@@ -12,7 +12,7 @@ import fizzBuzz from '../src/fizzBuzz.js'
  * 
  */
 
- describe.only("Challenge FizzBuzz", () => {
+ describe("Challenge FizzBuzz", () => {
 
     it("should return Fizz when to multiple of 3", () => {
         expect(fizzBuzz(3)).to.be.equal('Fizz')
@@ -28,5 +28,9 @@ import fizzBuzz from '../src/fizzBuzz.js'
 
     it("should return the number when non-multiple", () => {
         expect(fizzBuzz(7)).to.be.equal(7)
+    })
+
+    it("should return 0 when the number was 0", () => {
+        expect(fizzBuzz(0)).to.be.equal(0)
     })
  })
